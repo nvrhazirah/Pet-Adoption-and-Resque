@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+
+/*slider*/
+.bodyslider{
+    margin:10px;
+    padding:10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.slider{
+    width: 800px;
+    height:500px;
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+.slides{
+    width:500%;
+    height:500px;
+    display: flex;
+}
+
+.slides input{
+    display:none;
+}
+
+.slide{
+    width:20%;
+    transition: 2s;
+}
+
+.slide img{
+    
+    padding:0;
+    width:800px;
+    height:500px;
+}
+
+.navigation-manual{
+    
+    width:800px;
+    margin-top: -40px;
+    display:flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right:40px;
+}
+
+.manual-btn:hover{
+    background: yellowgreen;
+}
+
+#radio1:checked ~ .first{
+    margin-left:0;
+}
+
+#radio2:checked ~ .first{
+    margin-left:-20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left:-40%;
+}
+
+.navigation-auto{
+    
+    display: flex;
+    width:800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div{
+    border: 2px solid black;
+    padding:5px;
+    border-radius:10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right:40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: yellowgreen;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: yellowgreen;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: yellowgreen;
+}
+
+
+
+#radius:checked
+/*slider*/
+
+.navbar-top{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-weight: bold;
+}
+
+/*main content*/
+.main-content{
+    width:100%;
+    height:150vh;
+    background-image: url(./image/bg-img.jpeg);
+    background-size: cover;
+    background-position: 70%;
+}
+
+.main-content2{
+    width:100%;
+    height:150vh;
+    background-size: cover;
+    background-position: 70%;
+}
+
+/*navbar*/
+#navbar-color{
+    background-color: rgba(238,224,208);
+}
+
+.navbar-nav{
+    margin: auto;
+    text-align: center;
+}
+
+.nav-link{
+    margin-left: 30px;
+    float: right;
+    font-weight: bold;
+    color: black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    color:green;
+}
+
+/*navbar*/
+
+/*Collection Of Pet Style*/
+/*content*/
+.content{
+    margin-top:150px;
+    margin-left:60px;
+}
+
+content h1{
+    font-size: 50px;
+}
+
+#btn1 button{
+    width:150px;
+    height:32px;
+    background: #E0FFCC;
+    border: 1px solid black;
+    letter-spacing: 3px;
+    font-weight: bold;
+    box-shadow: 0 0 5px black;
+}
+
+#btn1 button:hover{
+    background-color: green;
+    color:black;
+    text-decoration: none;
+
+}
+
+.content a{
+    text-decoration: none;
+    color:black;
+}
+
+.content a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+@media screen and (max-width:420px){
+    .content h1{
+        font-size:30px;
+    }
+}
+/*content*/
+/*main content*/
+
+/*card1*/
+#btn2 button{
+    width: 100px;
+    height:30px;
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+    
+}
+
+#btn2 button:hover{
+    background-color: rgba(238,224,208);
+    text-decoration: none;
+}
+
+#btn2 a{
+    text-decoration: none;
+    color:black;
+}
+
+#btn a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+#tpc{
+    box-shadow: 0 0 5px black;
+    transition: 0.5s;
+}
+
+#tpc:hover{
+    transform: translateY(-10px);
+}
+/*card1*/
+
+/*card1*/
+/*card1*/
+
+/*Collection Of Pet Style*/
+
+/*adopt Form*/
+.main-content1{
+    width:100%;
+    height:90vh;
+    background-image: url(./image/adopt.png);
+    background-size: cover;
+    background-position: 70%;
+}
+
+.book{
+    background: #f9f9f9;
+    padding: 50px;
+    display:flex;
+}
+
+.main-text h1{
+    text-align: center;
+    text-shadow: 0px 1px 1px black;
+    font-weight: 600;
+}
+
+.main-text h1 span{
+    color: green;
+}
+
+.book .cardAdopt{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+
+.book .row{
+    margin-top: 30px;
+}
+
+.book form input{
+    margin: 10px;
+    padding: 10px;
+    color:black;
+    border:none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+
+}
+
+.book form select{
+    margin: 10px;
+    padding: 10px;
+    color:black;
+    border:none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+
+}
+
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: greenyellow;
+    color: black;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.submit:hover{
+    width: 170px;
+}
+
+@media (max-width: 765px){
+    .book{
+        padding:0px;
+    }
+
+    .main-text h1{
+        padding:20px;
+    }
+}
+/*adopt Form*/
+
+
+
+
+/*footer*/
+#footer{
+    width: 100%;
+    background-color: black;
+    margin-top: 100px;
+}
+
+#footer p{
+    color: white;
+}
+
+.icons i{
+    color: rgba(238,224,208);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.copyright{
+    color: white;
+    margin-top: 20px;;
+}
+
+.credite{
+    color:white;
+}
+
+/*events*/
+
+.titles{
+    padding:20px;
+    text-align: center;
+    font-size:4vmin;
+    color: #49497e;
+}
+
+section{
+    background-color: #f0f0f0;
+}
+
+.card-container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card5{
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin:20px;
+}
+
+.card5 .imgH{
+    width:100%;
+    height:auto;
+}
+
+.card-content{
+    padding:16px;
+}
+
+.card-content h4{
+    font-size: 28px;
+    margin-bottom:8px;
+}
+
+.card-content p{
+    color:#666;
+    font-size: 16px;
+    line-height:1.3;
+}
+
+.video-content{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.video{
+    position: relative;
+    overflow:hidden;
+    height: 0;
+    border: 1px solid red;
+    padding-bottom: 55%;
+    
+}
+
+.video > iframe{
+    position: absolute;
+    width:100%;
+    height:100%;
+}

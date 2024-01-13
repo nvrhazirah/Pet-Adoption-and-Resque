@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report & Rescue</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+
+
+		body {
+			font-family: 'Arial', sans-serif;
+			background-image: url(./image/bg.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 80%;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+
+        .navbar-top {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: bold;
+        }
+
+        .main-content {
+            width: 100%;
+            height: 90vh;
+            background-size: cover;
+            background-position: 70%;
+        }
+
+        #navbar-color {
+            background-color: rgba(238, 224, 208);
+        }
+
+        .navbar-nav {
+            margin: auto;
+            text-align:center;
+        }
+
+        .nav-link {
+            margin-left: 30px;
+            float: right;
+            font-weight: bold;
+            color: black;
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: green;
+        }
+
+        main {
+            min-height: calc(100vh - 72px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+			margin-top: -350px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ECCEAB;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        #map {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: black;
+            margin-top: 100px;
+        }
+
+        #footer p {
+            color: white;
+        }
+
+        .icons i {
+            color: rgba(238, 224, 208);
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .copyright {
+            color: white;
+            margin-top: 20px;
+        }
+
+        .credite {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <nav class="navbar navbar-expand-md" id="navbar-color">
+            <div class="container">
+                <a href="homepage.html">
+                    <img src="./image/logo.jpeg" alt="" width="20%">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span><i><img src="./image/menus.png" alt="" width="30px"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutUs.html">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="adopt.html">Adopt</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="colOfPet.html">Collection Of Pet</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Report&Resque.html">Report & Rescue</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Veterinar.html">Veterinar</a>
+                        </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Volunteer.html">Volunteer</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Shop.html">Shop</a>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <div class="form-container">
+            <div id="success-message" style="display: none;">Form submitted successfully!</div>
+            <h1>FORM REPORT AND RESCUE</h1>
+            <form id="volunteerForm" onsubmit="validateForm(event)">
+                <label for="phone_number">Phone Number:</label>
+                <input type="tel" id="phone_number" name="phone_number" required>
+
+                <label for="map">Select Location on Map:</label>
+                <div id="map" style="height: 300px;"></div>
+
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+
+                <label for="type_of_animal">Type of Animal:</label>
+                <select id="type_of_animal" name="type_of_animal" required>
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </select>
+
+                <label for="sex_animals">Sex Animals:</label>
+                <select id="sex_animals" name="sex_animals" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Leaflet map initialization
+        var map;
+        var rescueMarker;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            map = L.map('map').setView([5.407718554474791, 103.08840613068529], 15);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            map.on('click', function (e) {
+                if (rescueMarker) {
+                    map.removeLayer(rescueMarker);
+                }
+
+                rescueMarker = L.marker(e.latlng).addTo(map)
+                    .bindPopup('Rescue location: ' + e.latlng.toString())
+                    .openPopup();
+            });
+        });
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            const phoneNumber = document.getElementById('phone_number').value;
+            // const selectLocationOnMap = document.getElementById('select_location_on_map').value;
+            const photo = document.getElementById('photo').value;
+            const typeOfAnimal = document.getElementById('type_of_animal').value;
+            const sexAnimals = document.getElementById('sex_animals').value;
+
+            // Check if any of the required fields is empty
+            if (!phoneNumber || !photo || !typeOfAnimal || !sexAnimals) {
+                alert('All fields are required. Please fill them out.');
+            } else {
+                // Hide the form
+                document.getElementById('volunteerForm').style.display = 'none';
+
+                // Show the success message
+                document.getElementById('success-message').style.display = 'block';
+            }
+        }
+    </script>
+
+<footer id="footer">
+    <h1 class="text-center" style="color:white;">Pet Adoption and Resque</h1>
+    <p class="text-center">Unleashing Compassion, One Rescue at a Time-Where Every Pet Finds a Loving Home.</p>
+    <div class="icons text-center">
+      <a href="https://x.com/dasanimals?s=11" target="_blank">
+        <i class="bx bxl-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/FrontStreetAnimalShelter?mibextid=LQQJ4d" target="_blank">
+      <i class="bx bxl-facebook"></i>
+  </a>
+  <a href="https://www.petfinder.my/" target="_blank">
+    <i class="bx bxl-google"></i>
+</a>
+
+<!-- Instagram -->
+<a href="https://www.instagram.com/petpalanimalshelterstpete?igsh=MWNiM3A5cjUzZmU5Yg==" target="_blank">
+    <i class="bx bxl-instagram"></i>
+</a>
+    </div>
+    <div class="copyright text-center"  >
+        &copy; Copyright <strong><span>Pet Adoption and Rescue</span></strong>. All Rights Reserved
+    </div>
+    <div class="credite text-center">
+        Designed By Marlianti, Arifah, Hazirah
+    </div>
+</footer>
+</body>
+</html>

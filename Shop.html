@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <!--bootstrap link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--bootstrap link-->
+    <!--icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--icons-->
+    <!---navbar-->
+    <div class="main-content2">
+        <nav class="navbar navbar-expand-md" id="navbar-color">
+            <div class="container">
+                <!-- Toggler/collapsible Button -->
+                <a href="homepage.html">
+                    <img src="./image/logo.jpeg" alt="" width="20%">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavbar">
+                    <span><i><img src="./image/menus.png" alt="" width="30px"></i></span>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutUs.html">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="adopt.html">Adopt</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="colOfPet.html">Collection Of Pet</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Report&Resque.html">Report & Rescue</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Veterinar.html">Veterinar</a>
+                        </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Volunteer.html">Volunteer</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Shop.html">Shop</a>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </head>
+    <style>
+body {
+            margin: 0;
+            padding: 0;
+            background: url("image/paws1.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+.container1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .item {
+            width: 48%;
+            margin-bottom: 20px;
+	    position: relative;
+    display: flex;
+    flex-direction: column;
+            align-items: center;
+text-align: center;
+        }
+
+        .imgs {
+            width: 50%;
+            height: auto;
+         margin: 0 auto;
+ border-radius: 50%;
+        }
+
+        .description {
+            margin-top: 10px;
+            text-align: center;
+	font-weight: bold;
+        }
+.checkout-link {
+            text-decoration: none;
+        }
+
+        .button3 {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button3:hover {
+            background-color: #45a049;
+        }
+
+        /* Shop Title Style */
+        .shop-title {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px}
+    </style>
+</head>
+
+    <body>
+        <div class="shop-title">
+            <h2>SHOP</h2>
+        </div>
+        <div class="container1">
+
+
+        <div class="item">
+            <img src="./image/catfashion.jpg" alt="Image 1" class="imgs">
+            <div class="description">
+                <p>Cat Fashion</p>
+                <a href="https://shopee.com.my/search?keyword=baju%20kucing" class="checkout-link">
+                    <button class="button3">Checkout</button>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img src="./image/dogfashion.jpg" alt="Image 2" class="imgs">
+            <div class="description">
+                <p>Dog Fashion</p>
+                <a href="https://shopee.com.my/search?keyword=baju%20anjing" class="checkout-link">
+                    <button class="button3">Checkout</button>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img src="./image/catdogfood.jpg" alt="Image 3" class="imgs">
+            <div class="description">
+                <p>Pets Food</p>
+                <a href="https://shopee.com.my/search?keyword=makanan%20anjing%20kucing" class="checkout-link">
+                    <button class="button3">Checkout</button>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img src="./image/manual.jpg" alt="Image 4" class="imgs">
+            <div class="description">
+                <p>Pets Manual</p>
+              
+                <a href="https://shopee.com.my/search?keyword=manual%20kucing%20dan%20anjing" class="checkout-link">
+                    <button class="button3">Checkout</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<footer id="footer">
+    <h1 class="text-center" style="color:white;">Pet Adoption and Resque</h1>
+    <p class="text-center">Unleashing Compassion, One Rescue at a Time-Where Every Pet Finds a Loving Home.</p>
+    <div class="icons text-center">
+      <a href="https://x.com/dasanimals?s=11" target="_blank">
+        <i class="bx bxl-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/FrontStreetAnimalShelter?mibextid=LQQJ4d" target="_blank">
+      <i class="bx bxl-facebook"></i>
+  </a>
+  <a href="https://www.petfinder.my/" target="_blank">
+    <i class="bx bxl-google"></i>
+</a>
+
+<!-- Instagram -->
+<a href="https://www.instagram.com/petpalanimalshelterstpete?igsh=MWNiM3A5cjUzZmU5Yg==" target="_blank">
+    <i class="bx bxl-instagram"></i>
+</a>
+    </div>
+    <div class="copyright text-center"  >
+        &copy; Copyright <strong><span>Pet Adoption and Rescue</span></strong>. All Rights Reserved
+    </div>
+    <div class="credite text-center">
+        Designed By Marlianti, Arifah, Hazirah
+    </div>
+</footer>
+
+</html>
